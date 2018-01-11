@@ -1,6 +1,6 @@
 {
   "name": "doca-bootstrap-theme",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Doca theme using Twitter Bootstrap",
   "main": "index.js",
   "author": "Vojtech Miksu <vojtech@miksu.cz>",
@@ -10,10 +10,8 @@
     "url": "https://github.com/cloudflare/doca-bootstrap-theme"
   },
   "scripts": {
-    "build": "npm run clean && mkdir -p build && babel components --out-dir build",
-    "lint": "eslint components || true",
-    "prepublish": "cross-env NODE_ENV=production npm run build",
-    "clean": "rimraf build"
+    "build": "scripts/release.sh",
+    "lint": "eslint components || true"
   },
   "files": [
     "*.md",
