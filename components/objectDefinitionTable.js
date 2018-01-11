@@ -75,7 +75,7 @@ class ObjectDefinitionTable extends Component {
                     <div key={subkey}>
                       <h6>{subdefinition.get('description')}</h6>
                       <Definition
-                        definitions={subdefinition.get('all_props')}
+                        definitions={subdefinition.get('properties')}
                         contextId={this.props.contextId}
                         fieldPointer={this.props.fieldPointer +
                                       '/' + key +
@@ -89,7 +89,7 @@ class ObjectDefinitionTable extends Component {
                     <div key={subkey}>
                       <h6>{subdefinition.get('description')}</h6>
                       <Definition
-                        definitions={subdefinition.get('all_props')}
+                        definitions={subdefinition.get('properties')}
                         contextId={this.props.contextId}
                         fieldPointer={this.props.fieldPointer +
                                       '/' + key +

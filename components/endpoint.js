@@ -29,7 +29,7 @@ class Endpoint extends Component {
             <h4>Required parameters</h4>
             <ObjectDefinitionTable
               definitions={
-                link.getIn(['parameters', 'all_props']).filter((val, key) =>
+                link.getIn(['parameters', 'properties']).filter((val, key) =>
                   link.getIn(['parameters', 'required_props']).indexOf(key) > -1
                 )
               }
@@ -44,7 +44,7 @@ class Endpoint extends Component {
             <h4>Optional parameters</h4>
             <ObjectDefinitionTable
               definitions={
-                link.getIn(['parameters', 'all_props']).filter((val, key) =>
+                link.getIn(['parameters', 'properties']).filter((val, key) =>
                   link.getIn(['parameters', 'optional_props']).indexOf(key) > -1
                 )
               }

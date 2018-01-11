@@ -60,7 +60,7 @@ class Schema extends Component {
                       }
                       {obj.get('example') && <ExampleObject example={obj.get('example')} />}
                       <ObjectDefinitionTable
-                        definitions={obj.get('all_props')}
+                        definitions={obj.get('properties')}
                         contextId={obj.get('title')}
                         fieldPointer={
                           '/' + schema.getIn(['object_definition', 'which_of']) +
@@ -77,7 +77,7 @@ class Schema extends Component {
                   }
 
                   <ObjectDefinitionTable
-                    definitions={schema.getIn(['object_definition', 'all_props'])}
+                    definitions={schema.getIn(['object_definition', 'properties'])}
                     contextId={schema.getIn(['object_definition', 'title'])}
                     fieldPointer="/properties"
                   />
